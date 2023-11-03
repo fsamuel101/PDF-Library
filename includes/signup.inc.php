@@ -2,9 +2,9 @@
 
 // this is essential to prevent the user to go here without sending a request
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $username = $_POST["username"]; //getting the input username
+    $lastname = $_POST["lastname"]; //get the lastname
     $pwd = $_POST["password"];      //getting the password
-    $email = $_POST["email"];       //getting the email
+    $studentnumber = $_POST["studentnumber"];       //getting the email
 
     try{
         require_once 'dbh.inc.php';
@@ -13,17 +13,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         // ERROR HANDLERS TO PREVENT FUCKED UP MOMENTS
         $errors = [];
-        if(is_input_empty($username, $pwd, $email)){
+        if(is_input_empty($lastname, $pwd, $studentnumber)){
             $errors['empty_input'] = 'Fill in all fields';
         }
-        if(is_email_invalid($email)){
-            $errors['invalid_email'] = 'Email is invalid';
+        elseif(is_student_number_used($pdo, $studentnumber)){
+            $errors['student_number_used'] = 'This student number is already taken';
         }
-        if(is_username_taken($pdo, $username)){
-            $errors['username_taken'] = 'Username is already taken';
-        }
-        if(is_email_registered( $pdo, $email)){
-            $errors['email_taken'] = 'Email is already taken';
+        elseif(is_student_number_valid($pdo, $studentnumber, $lastname)){
+            $errors['invalid_student_number'] = 'Invalid Student Number';
         }
 
         require_once 'config_session.inc.php';
@@ -31,7 +28,19 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         if($errors){
             $_SESSION["errors_signup"] = $errors;
             header("Location: ../index.php");
+            exit();
+            
         }
+
+        create_user($pdo, $lastname, $pwd, $studentnumber );
+ 
+
+        header("Location: ../index.php?signup=success");
+
+        $pdo= null;
+        $stmt = null;
+        die(); // to terminate the program
+
     }catch(PDOException $e){
         die('Query failed'. $e->getMessage());
     }
