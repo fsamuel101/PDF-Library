@@ -9,9 +9,13 @@ function check_signup_errors(){
         echo '<br>';
 
         foreach ($errors as $error){ 
-            echo '<p class = "form-error>' . $error . '</p>';
+            echo '<p class = "form-error">' . $error . '</p>';
         }
 
         unset($_SESSION['errors_signup']);
+    }elseif(isset($_GET["signup"]) && $_GET["signup"] == "sucess"){
+        echo "<br>";
+        echo '<p class ="form-sucess"> Signup Sucess!</p>';
+
     }
 }
