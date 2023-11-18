@@ -4,6 +4,18 @@ require_once 'includes/signup_view.inc.php';
 require_once 'includes/login_view.inc.php';
 require_once 'includes/config_session.inc.php';
 
+
+// Start a session
+
+// Check if the user is logged in
+if (isset($_SESSION['user_id'])) {
+    // Redirect the user to the login page
+    header("Location: welcome.php");
+    exit();
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +35,7 @@ require_once 'includes/config_session.inc.php';
     <?php include('header.php')?>
     <div class="index-container">
         <section>
-            <form action="includes/login.inc.php" method="post">
+            <form action="includes/login.inc.php" method="post" autocomplete="off">
                 <input type="text" name="studentnumber" placeholder="Student Number" id="" class="green-input">
                 <input type="password" name="password" placeholder="Password" id="" class="green-input">
                 <button class="green-input">Login</button>
@@ -45,7 +57,6 @@ require_once 'includes/config_session.inc.php';
 
     
     </div>
-
 </body>
 
 </html>
