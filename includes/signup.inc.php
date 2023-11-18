@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         if($errors){
             $_SESSION["errors_signup"] = $errors;
-            header("Location: ../index.php");
+            header("Location: ../signup.php"); //if there are errors it will redirect in signup.php
             exit();
             
         }
