@@ -1,21 +1,133 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    align-items: center;
-    justify-content: center;
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
 
-section{
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #266a2d;
+    --font-main: 'Poppins', sans-serif;
+}
+
+.green-header {
+    width: 100%;
+    height: 2rem;
+    background-color: var(--accent-color);
+
+}
+
+.main-font-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent-color);
+    letter-spacing: 0.05rem;
+    font-size: 2em;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    background-color: var(--primary-color);
+}
+
+.logo-image {
+    max-width: 100%;
+    max-height: 9rem;
+    height: auto;
+}
+
+.contact-details {
+    display: flex;
+    gap: 1em;
+
+}
+
+.contact-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px red;
+    gap: 0.5rem;
+    color: var(--accent-color);
+}
+
+.contact-container p:nth-child(1) {
+    font-weight: bold;
+
+}
+
+/* INDEX DESIGN */
+
+body {
+    background-image: url('../images/background.jpg');
+    /* Replace with the path to your image */
+    background-repeat: no-repeat;
+    /* Optional: prevent image repetition */
+    background-size: cover;
+    /* Optional: cover the entire background */
+}
+
+.index-container {
+    display: flex;
     flex-direction: column;
+}
+
+.index-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9%;
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.green-input {
+    color: var(--primary-color);
+    /* From https://css.glass */
+    background: rgba(38, 106, 45, 0.71);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(38, 106, 45, 0.26);
+    font-size: 2em;
+    padding: 0.3em;
+}
+.index-container form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.index-container form button {
+    width: 100%;
+}
+
+.index-container form input::placeholder {
+    opacity: 1;
+    color: var(--primary-color);/* Change this to your desired color */
+  }
+
+  .forgot{
+    color: var(--primary-color);
+    margin: 0.5em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+.register-button{
+    text-decoration: none;
 }
