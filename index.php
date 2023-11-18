@@ -1,7 +1,9 @@
 <?php
 
 require_once 'includes/signup_view.inc.php';
+require_once 'includes/login_view.inc.php';
 require_once 'includes/config_session.inc.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +24,7 @@ require_once 'includes/config_session.inc.php';
             <input type="password" name="password" placeholder="Password" id="">
             <button>Login</button>
         </form>
+        
         <br>
 
         <h1>Signup</h1>
@@ -31,11 +34,20 @@ require_once 'includes/config_session.inc.php';
             <input type="password" name="password" placeholder="Password">
             <button>Register</button>
         </form>
+
+
+        <form action="includes/logout.inc.php">
+            <button>Log out</button>
+        </form>
     </section>
     
 
     <?php
     check_signup_errors();
+    check_login_errors();
+    ?>
+    <?php
+        
     ?>
 </body>
 
