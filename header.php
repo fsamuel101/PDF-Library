@@ -2,8 +2,10 @@
 
 </div>
 <nav class="header-main">
-    <img src="images\plsp-logo.jpeg" class="logo-image" alt="">
-    <h1 class="main-font-title">PAMANTASAN NG LUNGSOD NG SAN PABLO</h1>
+    <div class="brand">
+        <img src="images\plsp-logo.jpeg" class="logo-image" alt="">
+        <h1 class="main-font-title">PAMANTASAN NG LUNGSOD NG SAN PABLO</h1>
+    </div>
 
 
     <div class="contact-details">
@@ -24,4 +26,9 @@
             </div>
 
         </div>
+
+        <form action="includes/logout.inc.php">
+            <button>Log out</button>
+        </form>
+
 </nav>

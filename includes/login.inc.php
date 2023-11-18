@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['last_regeneration'] = time();
 
-        header('Location: ../library.php?login=success');
+        header('Location: ../welcome.php?login=success'); //successfull login will be redirected to welcome.php where there is a landing page
         $pdo = null;
         $statement = null;
 
