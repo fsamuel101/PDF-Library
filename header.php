@@ -10,7 +10,7 @@
 
     <div class="contact-details">
         <div class="phone-number contact-container">
-            <i class="fa-solid fa-phone fa-lg" style="color: #266a2d;"></i>
+            <img src="images/phone.png" alt="" height="50px;">
             <div>
                 <p>Phone Number</p>
                 <p>(049) 536-7830</p>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="email-ad contact-container">
-            <i class="fa-solid fa-envelope fa-lg" style="color: #266a2d;"></i>
+            <img src="images/message.png" alt="" height="50px;">
             <div>
                 <p>Email Address</p>
                 <p>plsp.official@plsp.edu.ph</p>
@@ -27,8 +27,5 @@
 
         </div>
 
-        <form action="includes/logout.inc.php">
-            <button>Log out</button>
-        </form>
 
 </nav>

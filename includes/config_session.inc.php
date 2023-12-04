@@ -50,5 +50,4 @@ function regenerate_session_id_loggedin(){
     session_id($sessionId);
     
     $_SESSION["last_generation"] = time();
-
 }

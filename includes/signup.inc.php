@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $lastname = $_POST["lastname"]; //get the lastname
     $pwd = $_POST["password"];      //getting the password
     $studentnumber = $_POST["studentnumber"];       //getting the email
-
+ 
     try{
         require_once 'dbh.inc.php';
         require_once 'signup_model.inc.php'; // the model always comes first

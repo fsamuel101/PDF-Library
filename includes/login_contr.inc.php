@@ -11,7 +11,7 @@ function is_student_number_wrong(bool|array $result){   //we can accept two type
 }
 
 function is_password_wrong(string $pwd, string $hashedPwd){   //we can accept two types of data here, array and boolean
-    if(!password_verify($pwd, $hashedPwd)){
+    if(password_verify($pwd, $hashedPwd)){
         return false;
     }else{
         return true;

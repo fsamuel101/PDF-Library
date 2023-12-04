@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #266a2d;
+    --font-main: 'Poppins', sans-serif;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.green-header {
+    width: 100%;
+    font-family: var(--font-main);
+    color: var(--accent-color);
+    font-size: 1.2em;
+}
+
+.solidgreen1 {
+    background-color: var(--accent-color);
+    height: 1.5em;
+    width: 100%;
+}
+
+.solidgreen2 {
+    background-color: var(--accent-color);
+    height: 1em;
+    width: 100%;
+}
+
+.admin-title {
+    padding: 1.6em;
+    margin-left: 5em;
+}
+
+.library{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 90%;
+}
+
+.book-container {
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    min-height: fit-content;
+}
+
+.search-container{
+    background-color: white;
+    /* border: solid 2px var(--accent-color); */
+    padding: 3em;
+    position: relative;
+    align-self: start;
+    height: 70vh;
+    overflow-y: auto;
+    border-left: solid 1px var(--accent-color);
+    margin-top: 20px;
+}
+
+/* design for search */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--accent-color );
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 0.5em;
+    font-size: 8px;
+    border-radius: 5px;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.book-cover{
+    height: 200px;
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.book-cover:hover{
+    transform: scale(1.2);
+}
+.book-link{
+    text-decoration: none;
+    color: var(--accent-color);
+    font-family: var(--font-main);
+    text-align: center;
+}
+.books .book-title {
+    max-width: 150px;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+.search-results{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.search-books{
+    width: 100%;
+    font-size: 4px;
+    margin-top: 3em;
+}
+.search-book-cover{
+    height: 100px;
+    width: 75px;
+}
+
+.search-book-link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-main);
+    color: var(--accent-color);
+    font-size: 3em;
+    gap: 2em;
+    text-decoration: none;
+
+}
+.search-book-link:hover{
+    box-shadow: rgba(38,106,45, 0.3) 0px 30px 60px -12px inset, rgba(14, 108, 6, 0.3) 0px 18px 36px -18px inset;
+}

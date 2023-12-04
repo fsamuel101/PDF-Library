@@ -12,28 +12,61 @@ require_once 'includes/config_session.inc.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/admin-panel.css">
+    <title>PLSP E-Library</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px; /* Adjust the width as needed */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
 
-    <style>
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .authors{
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
-
     <form  action="includes/admin_book_management.inc.php" method="POST" enctype="multipart/form-data">
         <div>
-            <label for="bookFile">Upload</label>
-            <input type="file" name="bookFile">
+            <label for="bookFile">Book to Upload</label>
+            <input type="file" name="bookFile" placeholder="Choose book">
         </div>
 
         <div>
@@ -41,29 +74,9 @@ require_once 'includes/config_session.inc.php';
             <input type="file" name="bookCover">
         </div>
     
-        <div>
-            <label for="bookYear">Year of Publication</label>
-            <input type="text" name="bookYear">
-        </div>
-    
-        <!-- Input fields for authors (using square brackets for arrays) -->
-        <div class="authors">
-            <label for="authors[]">Name of the Author</label>
-            <input type="text" name="authors[]">
-        </div>
-    
-        <!-- You can add more author input fields as needed -->
-    
-        <!-- Add a button to dynamically add more author fields if necessary -->
-        <button type="button" onclick="addAuthorField()">Add Another Author</button>
-    
         <!-- Submit button -->
-        <button>Submit</button>
+        <button>Upload</button>
     </form>
-    
-    <script src="js/book_management.js">
-    
-    </script>
     
 </body>
 

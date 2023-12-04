@@ -2,8 +2,8 @@
 
 $host = 'localhost';
 $dbname = 'plsp_pdf_library';
-$dbusername = 'root';
-$dbpassword = '';
+$dbusername = 'root'; //default
+$dbpassword = '';   //default
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);

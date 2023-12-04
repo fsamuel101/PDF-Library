@@ -12,7 +12,7 @@ function get_student_number(object $pdo, string $studentnumber){
     $stmt->execute();
 
 
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);// true or false
     return $result;
 }
 
@@ -42,7 +42,7 @@ function set_user(object $pdo, string $last_name, string $pwd, string $student_n
     $stmt = $pdo->prepare($query);
 
     $option = [
-        'cost' => 12
+        'cost' => 5
     ];
 
     $hashed_password = password_hash($pwd, PASSWORD_BCRYPT, $option);

@@ -75,6 +75,7 @@ body{
     z-index: 9;
     border: 0;
     font-size: 2rem;
+    text-decoration: none;
   }
   
   .button-41:hover {
