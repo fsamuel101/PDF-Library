@@ -65,7 +65,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div class= "welcome-message">
             <h1>Welcome PLSPians</h1>
-            <button class="button-41" role="button">Browse all Books</button>
+            <a href="library.php" class = "button-41">Browse Books</a>
         </div>
     </section>
     <?php include('footer.php')?>

@@ -8,7 +8,7 @@ function get_user(object $pdo, string $studentnumber){
     $stmt->bindParam(":studentnumber", $studentnumber);
     $stmt->execute();
 
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC); 
     return $result; //it will return either boolean or array
                     //bc if the student number is present it will output all the data with that student number
                     // if there are no student number like that it will output false

@@ -18,3 +18,7 @@ function upload_book(object $pdo, string $bookname, string $bookcover, string $p
 
     $stmt->execute();
 }
+
+function get_book(){
+    
+}

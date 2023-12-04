@@ -39,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     require_once 'admin_book_management_contr.inc.php'; // The model always comes first
 
                     handleUpload($pdo, $bookname, $bookcover, $bookyear, $booksize);
+                    echo 'uploaded succesfully';
                 } catch (PDOException $e) {
                     die('Query failed: ' . $e->getMessage());
                 }
