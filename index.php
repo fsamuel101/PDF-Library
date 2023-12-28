@@ -28,11 +28,12 @@ if (isset($_SESSION['user_id'])) {
     <title>Plsp Library</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/errors.css">
+    
 </head>
 
 <body>
 
-    <?php include('header.php')?>
+    <?php include('header-main.php')?>
     <div class="index-container">
         <section>
             <form action="includes/login.inc.php" method="post" autocomplete="off">
@@ -41,7 +42,7 @@ if (isset($_SESSION['user_id'])) {
                 <button class="green-input">Login</button>
             </form>
 
-            <a href="password.php" class="forgot">Forgot Password?</a>
+            <a href="change_password.php" class="forgot">Forgot Password?</a>
             <a href="signup.php" class="green-input register-button">Register</a>
 
 

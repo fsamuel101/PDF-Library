@@ -36,9 +36,9 @@ function get_student_number_lastname(object $pdo, string $studentnumber, string 
     }
 }
 
-function set_user(object $pdo, string $last_name, string $pwd, string $student_number){
-    $query = "INSERT INTO student_user (lastname, pwd, studentnumber) VALUES
-    (:lastname, :pwd, :studentnumber);";
+function set_user(object $pdo, string $last_name, string $pwd, string $student_number, string $firstname, string $college){
+    $query = "INSERT INTO student_user (lastname, pwd, studentnumber, first_name, college) VALUES
+    (:lastname, :pwd, :studentnumber, :first_name, :college);";
     $stmt = $pdo->prepare($query);
 
     $option = [
@@ -50,6 +50,8 @@ function set_user(object $pdo, string $last_name, string $pwd, string $student_n
     $stmt->bindParam(":lastname", $last_name);
     $stmt->bindParam(":pwd", $hashed_password);
     $stmt->bindParam(":studentnumber", $student_number);
+    $stmt->bindParam(":first_name", $firstname);
+    $stmt->bindParam(":college", $college);
     $stmt->execute();
 
 }

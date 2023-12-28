@@ -25,7 +25,9 @@ body {
     background-color: var(--accent-color);
 
 }
-
+.green{
+    color: var(--accent-color);
+}
 .main-font-title {
     font-family: 'Playfair Display', serif;
     color: var(--accent-color);
@@ -84,7 +86,7 @@ body {
 /* INDEX DESIGN */
 
 body {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/with\ bg.png');
     /* Replace with the path to your image */
     background-repeat: no-repeat;
     /* Optional: prevent image repetition */
@@ -149,4 +151,76 @@ body {
 .signup-container{
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Mobile-specific styles go here */
+    .header-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .logo-image {
+        max-width: 100%;
+        max-height: 5rem; /* Adjust height as needed for mobile */
+        height: auto;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 0.5em;
+        text-align: center;
+    }
+
+    .index-container section {
+        margin-top: 5%;
+        font-size: 1.2em; /* Adjust the font size for mobile */
+    }
+
+    .index-container form {
+        gap: 1em;
+    }
+
+    .index-container form button {
+        width: 100%;
+    }
+
+    /* Additional styles for smaller text */
+    .main-font-title {
+        font-size: 1.5em;
+    }
+
+    /* Add more styles as needed for smaller text on other elements */
+}
+
+@media only screen and (max-width: 600px) {
+    /* Styles for smaller screens go here */
+    .index-container section {
+        text-align: center;
+        margin-top: 40%;
+    }
+
+    .green-input {
+        width: 100%; /* Make the login and register buttons full-width on smaller screens */
+        font-size: 20px; /* Adjust the font size for smaller screens */
+    }
+
+    .forgot,
+    .register-button {
+        display: block;
+        width: 50%;
+        margin-top: 1em; /* Adjust the margin as needed */
+        text-align: center;
+        font-size: 15px; /* Adjust the font size for smaller screens */
+    }
+
+    .contact-details, .logo-image{
+        display: none;
+    }
+
 }

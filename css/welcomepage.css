@@ -81,3 +81,23 @@ body{
   .button-41:hover {
     background: var(--secondary-accent);
   }
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .history {
+        padding: 1em; /* Adjust padding for smaller screens */
+    }
+
+    .button-41 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .landingpage{
+        flex-direction: column-reverse;
+    }
+    .history{
+        width: 100%;
+    }
+}

@@ -1,31 +1,27 @@
-<div class="green-header">
+<header class="green-header">
+        <div class="solidgreen1"></div>
 
-</div>
-<nav class="header-main">
-    <div class="brand">
-        <img src="images\plsp-logo.jpeg" class="logo-image" alt="">
-        <h1 class="main-font-title">PAMANTASAN NG LUNGSOD NG SAN PABLO</h1>
-    </div>
+        <div class="admin-title">
 
-
-    <div class="contact-details">
-        <div class="phone-number contact-container">
-            <img src="images/phone.png" alt="" height="50px;">
-            <div>
-                <p>Phone Number</p>
-                <p>(049) 536-7830</p>
-            </div>
-        </div>
-
-        <div class="email-ad contact-container">
-            <img src="images/message.png" alt="" height="50px;">
-            <div>
-                <p>Email Address</p>
-                <p>plsp.official@plsp.edu.ph</p>
-                <!-- <h3><a href="mailto:plsp.official@plsp.edu.ph">plsp.official@plsp.edu.ph -->
+            <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+                <div onclick="toggleMenu()"></div>
+                <div onclick="toggleMenu()"></div>
+                <div onclick="toggleMenu()"></div>
             </div>
 
+            <div class="dropdown-menu" id="dropdownMenu">
+                <form action="includes/logout.inc.php" class="hamb">
+                    <button>Log out</button>
+                    <a href="change_password.php">Change Password</a>
+                </form>
+            </div>
+
+            <div>
+                <h1><strong>PLSP Library</strong></h1>
+                <p>Browse books</p>
+            </div>
+
+
         </div>
-
-
-</nav>
+        <div class="solidgreen2"></div>
+    </header>

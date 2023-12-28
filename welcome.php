@@ -26,7 +26,7 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-    <?php include('header.php')?>
+    <?php include('header-main.php')?>
 
     <!-- <form action="includes/logout.inc.php">
         <button>Log out</button>
@@ -65,7 +65,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div class= "welcome-message">
             <h1>Welcome PLSPians</h1>
-            <a href="library.php" class = "button-41">Browse Books</a>
+            <a href="library.php?category=all" class = "button-41">Browse Books</a>
         </div>
     </section>
     <?php include('footer.php')?>
