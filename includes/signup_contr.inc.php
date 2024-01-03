@@ -26,6 +26,6 @@ function is_student_number_valid( object $pdo, string $student_number, string $l
 
 }
 
-function create_user(object $pdo, string $last_name, string $pwd, string $student_number  ) {
-    set_user($pdo, $last_name, $pwd, $student_number);
+function create_user(object $pdo, string $last_name, string $pwd, string $student_number, string $firstname, string $college  ) {
+    set_user($pdo, $last_name, $pwd, $student_number, $firstname, $college);
 }

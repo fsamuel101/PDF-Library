@@ -16,24 +16,32 @@ require_once 'includes/config_session.inc.php';
 </head>
 
 <body>
-    <div class="green-header">
+    <div class="green-header navbar">
         <div class="solidgreen1"></div>
-        <div class="admin-title" >
+        <div class="admin-title">
             <h1> <strong>Admin Interface</strong></h1>
             <p>Manage things Like a Pro</p>
         </div>
         <div class="solidgreen2"></div>
     </div>
 
-    <section>
-        <a href="admin_book_management.php">
-            
-            <i class="fa-regular fa-folder fa-2xl" style="color: #266a2d;">Book Files Management</i>
-        </a>
-        <a href="admin_user_management.php">
-            <i class="fa-regular fa-folder fa-2xl" style="color: #266a2d;">User Management</i>
-        </a>
-        
+
+
+    <section class="container">
+        <div class="row align-items-center">
+            <div class="col xl">
+                <a href="admin_book_management.php">
+                    <img src="images/19.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="admin_user_management.php">
+                <img src="images/20.png" alt="">
+                </a>
+            </div>
+        </div>
+
+
     </section>
 </body>
 

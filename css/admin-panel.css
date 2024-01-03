@@ -38,14 +38,21 @@
     padding: 2em;
 }
 
-section{
+a{
+    font-style: none;
+    text-decoration: none;
+}
+
+.row{
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    padding: 3em;
+    padding: 10rem;
+
 }
-i{
-    font-style: var(--font-main);
+
+img{
+    height: 300px;
+    overflow: hidden;
 }
