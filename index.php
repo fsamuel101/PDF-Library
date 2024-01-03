@@ -26,9 +26,8 @@ if (isset($_SESSION['user_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/903a3ecc19.js" crossorigin="anonymous"></script>
     <title>Plsp Library</title>
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/errors.css">
-    
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>

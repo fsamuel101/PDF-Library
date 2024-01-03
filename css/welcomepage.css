@@ -47,7 +47,8 @@ body{
     gap: 1em;
 }
 .welcome-message h1{
-    color: black;
+    color: var(--accent-color);
+    text-align: center;
 }
 
 .button-41 {
@@ -86,18 +87,27 @@ body{
 /* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
     .history {
-        padding: 1em; /* Adjust padding for smaller screens */
+        padding: 0.5em; /* Adjust padding for smaller screens */
     }
 
     .button-41 {
         font-size: 1.2rem; /* Adjust font size for smaller screens */
-        padding: 1rem; /* Adjust padding for smaller screens */
+        padding: 0.5em; /* Adjust padding for smaller screens */
     }
 
     .landingpage{
         flex-direction: column-reverse;
+        margin: 1em;
+        font-size: 0.75em;
     }
     .history{
         width: 100%;
+    }
+
+    .history p{
+        font-size: 10px;
+    }
+    .welcome-message h1{
+        font-size: 1em;
     }
 }

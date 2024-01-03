@@ -128,7 +128,7 @@ input::placeholder {
     }
 
     .signup-container {
-        margin-top: 3%;
+        margin-top: 50%;
     }
 
     .signup-container>div:first-child {
@@ -152,6 +152,11 @@ input::placeholder {
         font-size: 1em; /* Adjust the font size for mobile */
         padding: 0.5em; /* Adjust the padding for mobile */
     }
+
+    .title{
+        font-size: 1.5em;
+    }
+
 
     /* Add more styles as needed for smaller screens */
 }
