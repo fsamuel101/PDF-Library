@@ -25,13 +25,16 @@ if (!isset($_SESSION['user_id'])) {
 
 
 <body>
-<?php include('header.php')?>
+    <?php include('header.php')?>
 
     <section class="library">
 
-        <div class="categories">
-            <ul>
-                <?php
+        <div class="menu">
+            <img src="images/categories.png" alt="" class="hamburger1">
+
+            <div class="categories dropdown">
+                <ul>
+                    <?php
                 $categoryMapping = [
                     'all' => 'All',
                     'A' => 'General Works',
@@ -63,11 +66,12 @@ if (!isset($_SESSION['user_id'])) {
                     echo '<li class="' . $class . '"><a  href="library.php?category=' . $key . '">' . $value . '</a></li>';
                 }
                 ?>
-            </ul>
+                </ul>
+            </div>
         </div>
 
         <div class="book-container">
-                <?php
+            <?php
                 if (isset($_GET['category'])) {
                     $selectedCategory = $_GET['category'];
                     show_books($pdo, $selectedCategory);
@@ -132,6 +136,35 @@ if (!isset($_SESSION['user_id'])) {
                 }
             }
         }
+
+        document.querySelector('.hamburger1').addEventListener('click', function () {
+            document.querySelector('.dropdown').classList.toggle('show');
+        });
+
+        document.querySelector('.dropdown').addEventListener('click', function () {
+            this.classList.remove('show');
+        });
+    </script>
+    <script>
+        function checkSize() {
+            if (window.innerWidth <= 600) {
+                document.querySelector('.categories').classList.add('dropdown');
+            } else {
+                document.querySelector('.categories').classList.remove('dropdown');
+            }
+        }
+
+        window.addEventListener('resize', checkSize);
+
+        checkSize();
+
+        document.querySelector('.hamburger1').addEventListener('click', function () {
+            document.querySelector('.dropdown').style.display = 'block';
+        });
+
+        document.querySelector('.dropdown').addEventListener('click', function () {
+            this.style.display = 'none';
+        });
     </script>
 
     <!-- <form action="includes/logout.inc.php">

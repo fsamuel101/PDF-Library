@@ -218,9 +218,40 @@ body {
         text-align: center;
         font-size: 15px; /* Adjust the font size for smaller screens */
     }
+    body{
+        background-image: url('../images/with bg.png');
+        /* Replace with the path to your image */
+        background-repeat: no-repeat;
+        /* Optional: prevent image repetition */
+        background-size: cover;
+        /* Optional: cover the entire background */
+        height: 100vh;
+    }
 
-    .contact-details, .logo-image{
+    .contact-details{
+        display: flex;
+        flex-direction: row;
+        font-size: 1em;
+    }
+
+    .contact-container img{
+        height: 40px;
+    }
+
+    .contact-container p{
+        font-size: 0.7em;
+    }
+    .contact-container p:nth-child(1) {
         display: none;
+    
+    }
+
+    .brand{
+        flex-direction: row;
+        gap: 0;
+    }
+    .brand h1{
+        font-size: 1.23em;
     }
 
 }

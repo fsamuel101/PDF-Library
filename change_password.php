@@ -21,7 +21,7 @@ require_once 'includes/config_session.inc.php';
         <div class="green-header">
             <div class="solidgreen1"></div>
             <div>
-                <h1> <strong>Forgot/Change Password</strong></h1>
+                <h1 class ="title" > <strong>Forgot/Change Password</strong></h1>
             </div>
             <div class="solidgreen2"></div>
         </div>
