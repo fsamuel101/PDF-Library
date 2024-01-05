@@ -47,13 +47,18 @@ require_once '../includes/config_session.inc.php';
             box-sizing: border-box;
         }
 
-        button {
+        button, .button {
             background-color: #4CAF50;
             color: white;
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+        }
+
+        .button{
+            background-color: red;
+            text-decoration: none;
         }
 
         button:hover {
@@ -111,7 +116,9 @@ require_once '../includes/config_session.inc.php';
 
         <!-- Submit button -->
         <button>Upload</button>
+        <a href="../admin_book_management.php" class="button"> Go back</a>
     </form>
+    
 
 </body>
 
