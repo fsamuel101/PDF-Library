@@ -23,6 +23,8 @@ body {
     flex-direction: column;
 }
 
+
+
 .green-header {
     width: 100%;
     font-family: var(--font-sec);
@@ -110,7 +112,7 @@ body {
 
 .library{
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 20% 60% 30%;
     width: 90%;
     padding: 2em;
     justify-content: center;
@@ -137,6 +139,11 @@ li:hover{
 
 .categories ul li.active a {
     color: #ffffff; /* Change the text color of the link inside the active li */
+}
+
+li{
+    font-family: Arial, Helvetica, serif;
+    
 }
 
 

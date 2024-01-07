@@ -1,8 +1,10 @@
 CREATE TABLE student_user(
     id INT(11) NOT NULL AUTO_INCREMENT,
-    lastname VARCHAR(30) NOT NULL,
-    pwd VARCHAR(255) NOT NULL,
     studentnumber VARCHAR(255) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    first_name VARCHAR(30) NOT NULL,
+    college VARCHAR(30) NOT NULL,
+    pwd VARCHAR(255) NOT NULL,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
     role VARCHAR(255) NOT NULL DEFAULT 'student',
     PRIMARY KEY (id)
@@ -16,12 +18,12 @@ CREATE TABLE student_data (
 );
 
 
-
-
 CREATE TABLE book_files (
     id INT AUTO_INCREMENT PRIMARY KEY,
     bookname VARCHAR(255) NOT NULL,
     bookcover VARCHAR(255) NOT NULL,
+    category VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
     filesize INT,
     uploaded_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );

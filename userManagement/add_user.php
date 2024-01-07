@@ -11,6 +11,7 @@ require_once '../includes/config_session.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin-panel.css">
     <title>PLSP-Library</title>
     <style>
         .col-md-6{
@@ -41,7 +42,8 @@ require_once '../includes/config_session.inc.php';
                     <label for="college">College:</label>
                     <input type="text" class="form-control" id="college" name="college" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary submitt">Submit</button>
+                <a href="../admin_user_management.php" class="btn btn-primary submitt goback">Go back</a>
             </form>
              <?php check_create_errors()?>
         </div>

@@ -20,7 +20,7 @@ require_once 'includes/config_session.inc.php';
         <div class="solidgreen1"></div>
         <div class="admin-title">
             <h1> <strong>Admin Interface</strong></h1>
-            <p>Manage things Like a Pro</p>
+            <p>Manage Books and Users</p>
         </div>
         <div class="solidgreen2"></div>
     </div>

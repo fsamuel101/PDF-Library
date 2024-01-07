@@ -50,16 +50,16 @@ if (!isset($_SESSION['user_id'])) {
                     'L' => 'Education',
                     'M' => 'Music',
                     'N' => 'Fine Arts',
-                    'O' => 'Language and Literature',
-                    'P' => 'Sciences',
-                    'Q' => 'Medicine',
-                    'R' => 'Agriculture',
-                    'S' => 'Technology',
+                    'P' => 'Language and Literature',
+                    'Q' => 'Science',
+                    'R' => 'Medicine',
+                    'S' => 'Agriculture',
                     'T' => 'Technology',
                     'U' => 'Military Science',
                     'V' => 'Naval Science',
                     'Z' => 'Bibliography, Library, Science, and General Information Resources, Fiction',
                 ];
+                
 
                 foreach ($categoryMapping as $key => $value) {
                     $class = (isset($_GET['category']) && $_GET['category'] === $key) ? 'active' : '';
@@ -82,7 +82,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="search-container">
             <form id="search-form">
                 <input type="text" name="query" id="search-input" placeholder="Search books...">
-                <button class="button" type="submit">Search</button>
+                <button class="button" type="submit"><img src="images/search-interface-symbol (1).png" alt="" style="width: 16px;"></button>
             </form>
             <div class="search-results" id="book-container">
 
