@@ -39,8 +39,8 @@ require_once 'includes/admin_user_management_model.inc.php';
 
             <div class="dropdown-menu" id="dropdownMenu">
                 <form action="includes/logout.inc.php" class="hamb">
-                    <button style="color: green;">Log out</button>
-                    <a href="change_password.php">Change Password</a>
+                    <button class="hover">Log out</button>
+                    <a class="hover" href="change_password.php">Change Password</a>
                 </form>
             </div>
 
