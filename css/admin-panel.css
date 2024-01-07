@@ -55,4 +55,18 @@ a{
 img{
     height: 300px;
     overflow: hidden;
+    transition: 0.2s ease-in;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.submitt{
+    background-color: #266a2d;
+    border: solid 1px var(--accent-color);
+}
+
+.goback{
+    background-color: red;
 }
