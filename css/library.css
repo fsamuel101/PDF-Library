@@ -22,7 +22,13 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
+.hover{
+    color: #266a2d;
+}
+.hover:hover{
+    background-color: var(--accent-color);
+    color: white;
+}
 
 
 .green-header {

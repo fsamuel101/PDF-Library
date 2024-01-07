@@ -19,8 +19,8 @@ require_once 'includes/config_session.inc.php';
     <div class="green-header navbar">
         <div class="solidgreen1"></div>
         <div class="admin-title">
-            <h1> <strong>Admin Interface</strong></h1>
-            <p>Manage Books and Users</p>
+            <h1 class="hover"> <strong>Admin Interface</strong></h1>
+            <p class="hover">Manage Books and Users</p>
         </div>
         <div class="solidgreen2"></div>
     </div>
