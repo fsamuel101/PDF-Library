@@ -53,7 +53,7 @@ body{
 
 .button-41 {
     background-color: var(--accent-color);
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
     color: #FFFFFF;
     cursor: pointer;
@@ -63,7 +63,7 @@ body{
     line-height: 1.6;
     outline: 0;
     overflow: hidden;
-    padding: 2rem;
+    padding: 1em;
     pointer-events: auto;
     position: relative;
     text-align: center;
@@ -77,6 +77,7 @@ body{
     border: 0;
     font-size: 2rem;
     text-decoration: none;
+    padding: 1em;
   }
   
   .button-41:hover {
@@ -110,4 +111,8 @@ body{
     .welcome-message h1{
         font-size: 1em;
     }
+}
+
+.button-41{
+    padding: 0.5em;
 }

@@ -2,12 +2,14 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    $errors = [];
+
     // Check if a file was uploaded without errors
     // Corrected condition
     if (isset($_FILES["bookFile"], $_FILES["bookCover"]) &&
          $_FILES["bookFile"]["error"] === 0 && $_FILES["bookCover"]["error"] === 0) {
 
-        $folder = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Z'];
+        $folder = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Z'];
 
         $selectedCategory = $_POST["category"];
 
@@ -62,9 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $allowed_book_types = array("pdf");
         $allowed_cover_types = array("jpeg", "jpg", "png");
         if (!in_array($book_type, $allowed_book_types) || !in_array($cover_type, $allowed_cover_types)) {
-            echo "Sorry, only PDF files for books and JPEG, JPG, and PNG files for covers are allowed.";
-            header("Location: ../index.php"); // If there are errors, it will redirect to the index page to start again
-            die();
+            $errors['nocover'] = '"Sorry, only PDF files for books and JPEG, JPG, and PNG files for covers are allowed."';
         } else {
             // Moves the uploaded file to the folder
             if (move_uploaded_file($_FILES["bookFile"]["tmp_name"], $book_file) &&
@@ -80,18 +80,31 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     require_once 'admin_book_management_model.inc.php'; // The model always comes first
                     require_once 'admin_book_management_contr.inc.php'; // The model always comes first
 
+
                     handleUpload($pdo, $bookname, $bookcover, $selectedCategory, $booksize, $categoryDescription);
-                    echo 'uploaded succesfully';
                 } catch (PDOException $e) {
                     die('Query failed: ' . $e->getMessage());
                 }
             } else {
-                echo "Sorry, there was an error uploading your files.";
+                $errors['noupload'] = 'Sorry there is an error uploading your file';
             }
         }
     } else {
-        echo "Please select both book file and cover file.";
+        $errors['nocover'] = 'Please select both cover photo and book file';
     }
+    require_once 'config_session.inc.php';
+
+    if ($errors) {
+        $_SESSION["errors_upload"] = $errors;
+        header("Location: ../bookManagement/upload.php"); // if there are errors, it will redirect to signup.php
+        exit();
+    }
+        header("Location: ../bookManagement/upload.php?upload=success");
+
+        $pdo = null;
+        $stmt = null;
+        die(); // to terminate the program
+
 } else {
     header("Location: ../index.php");
     die(); // To terminate the program

@@ -26,27 +26,26 @@ require_once 'includes/admin_book_management_model.inc.php';
 </head>
 
 <body>
-<header class="green-header">
+    <header class="green-header">
         <div class="solidgreen1"></div>
 
         <div class="admin-title">
-
-            <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+            <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="opacity: 0;">
                 <div onclick="toggleMenu()"></div>
                 <div onclick="toggleMenu()"></div>
                 <div onclick="toggleMenu()"></div>
             </div>
 
-            <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-menu" id="dropdownMenu" hidden="hidden">
                 <form action="includes/logout.inc.php" class="hamb">
-                    <button class="hover" >Log out</button>
+                    <button class="hover">Log out</button>
                     <a href="change_password.php" class="hover">Change Password</a>
                 </form>
             </div>
 
             <div>
-                <h1><strong>PLSP Library</strong></h1>
-                <p>Admin Interface</p>
+                <h1><strong>Book Management</strong></h1>
+                <a href="admin.php" class="h"><p>Admin Interface</p></a>
             </div>
 
 
@@ -54,7 +53,7 @@ require_once 'includes/admin_book_management_model.inc.php';
         <div class="solidgreen2"></div>
     </header>
     <div class="container my-5">
-        <h2 class= "green">List of books</h2>
+        <h2 class="green">List of books</h2>
         <a class="btn btn-outline-success" href="bookManagement/upload.php" role="button">Add Books</a>
         <br>
         <table class="table">
@@ -70,7 +69,7 @@ require_once 'includes/admin_book_management_model.inc.php';
                 </tr>
             </thead>
             <tbody>
-            <?php get_book($pdo)?>
+                <?php get_book($pdo)?>
             </tbody>
         </table>
     </div>

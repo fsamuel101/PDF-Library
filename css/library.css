@@ -51,10 +51,10 @@ body {
 }
 
 .admin-title {
-    padding: 1.6em;
+    padding: 0.5em;
     display: flex;
     justify-content: flex-start;
-    gap: 3em;
+    gap: 1em;
     position: relative; /* Add this line to establish a positioning context */
 }
 
@@ -131,6 +131,11 @@ body {
 
 }
 
+.h{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
 .categories{
     border-right: solid 1px var(--accent-color);
 }
@@ -204,7 +209,7 @@ button {
     border: none;
     padding: 0;
     font: inherit;
-    cursor: pointer;
+    cursor: context-menu;
     outline: inherit;
 }
 .hamb{
@@ -218,8 +223,9 @@ button {
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: context-menu; 
 }
+/* change the value of cursor to context */
 
 .button:hover {
     background-color: #45a049;
@@ -240,11 +246,14 @@ button {
 .book-cover{
     height: 200px;
     width: 150px;
-    transition: transform 0.3s;
 }
 
-.book-cover:hover{
-    transform: scale(1.2);
+.books:hover{
+    border: solid 3px var(--accent-color);
+}
+
+h2.book-title{
+    z-index: 999999;
 }
 .book-link{
     text-decoration: none;
@@ -343,7 +352,7 @@ button {
         cursor: pointer;
         justify-content: space-between;
         width: 3em;
-        z-index: 9;
+        z-index: 999999;
       }
       
       /* Styling for individual lines in the hamburger icon */
@@ -353,6 +362,7 @@ button {
         background-color: var(--accent-color);/* You can change the color as per your design */
         margin: 6px 0;
         transition: 0.4s;
+        z-index: 1;
       }
       .hide{
         display: none;
@@ -453,7 +463,10 @@ button {
     }
     
     .book-cover:hover{
-        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    .back{
+        background-color: #266a2d;
     }
     .book-link{
         text-decoration: none;
@@ -472,47 +485,11 @@ button {
         font-size: 1em;
       }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      /* hello */
-
-
-    
-
-
+      .dropdown-menu{
+        z-index: 99999999999999999;
+      }
+}
+.row{
+    display: flex;
+    gap: 8em;
 }

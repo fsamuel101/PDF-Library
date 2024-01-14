@@ -59,7 +59,7 @@ body {
 
 .contact-details {
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
 
 }
 
@@ -67,7 +67,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    /* TO reduce the size of this */
+    gap: 0em;                        
     color: var(--accent-color);
 }
 

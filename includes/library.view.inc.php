@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             foreach ($searchResults as $result) {
                 echo '<div class="search-books">';
                 echo '<a href="pdfbooks/' . $result['category'] . '/' . $result['bookname'] . '" class="search-book-link">';
-                echo '<img src="coverpages/' . $result['category'] . '/' . $result['bookcover'] . '" alt="' . $result['bookname'] . '" class="search-book-cover">';
+                echo '<div class="back"><img src="coverpages/' . $result['category'] . '/' . $result['bookcover'] . '" alt="' . $result['bookname'] . '" class="search-book-cover"></div>';
                 echo '<h2 class="search-book-title">' . ucwords(pathinfo($result['bookname'], PATHINFO_FILENAME)) . '</h2>';
                 echo '</a>';
                 echo '</div>';
