@@ -14,7 +14,7 @@ require_once 'includes/config_session.inc.php';
     <title>Signup</title>
 </head>
 
-<body >
+<body>
 
     <div class="vh" style="height: 100vh;">
 
@@ -33,7 +33,8 @@ require_once 'includes/config_session.inc.php';
                 <form action="includes/signup.inc.php" method="post">
                     <input type="text" name="studentnumber" placeholder="Student Number">
                     <input type="text" name="lastname" placeholder="Lastname">
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password"  id="myInput" name="password" placeholder="Password"> 
+                    <div class="showPassword"> <input type="checkbox" onclick="myFunction()"><p>Show Password</p></div>
                     <button class="green-input">Register</button>
                 </form>
             </div>
@@ -46,6 +47,18 @@ require_once 'includes/config_session.inc.php';
 
         </div>
     </div>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
 </body>
 
 </html>

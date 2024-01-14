@@ -21,7 +21,7 @@
             <img src="images/message.png" alt="" height="50px;">
             <div>
                 <p>Email Address</p>
-                <p><a class="green" href="mailto:plsp.official@plsp.edu.ph">plsp.official@plsp.edu.ph</a></p>
+                <p><a class="green" style="text-decoration: none;" href="mailto:plsp.official@plsp.edu.ph">plsp.official@plsp.edu.ph</a></p>
                
 
         </div>

@@ -1,5 +1,5 @@
 <?php
-
+require_once '../includes/admin_book_management_view.inc.php';
 require_once '../includes/config_session.inc.php';
 
 
@@ -47,7 +47,8 @@ require_once '../includes/config_session.inc.php';
             box-sizing: border-box;
         }
 
-        button, .button {
+        button,
+        .button {
             background-color: #4CAF50;
             color: white;
             padding: 10px 15px;
@@ -56,7 +57,7 @@ require_once '../includes/config_session.inc.php';
             cursor: pointer;
         }
 
-        .button{
+        .button {
             background-color: red;
             text-decoration: none;
         }
@@ -65,7 +66,7 @@ require_once '../includes/config_session.inc.php';
             background-color: #45a049;
         }
 
-        select{
+        select {
             width: 150px;
         }
     </style>
@@ -89,7 +90,7 @@ require_once '../includes/config_session.inc.php';
             <select id="category" name="category" required>
                 <option value="" disabled selected>Select a category</option>
                 <option value="A">General Works</option>
-                <option value="B">Philosophy, Pyschology, and Religion</option>
+                <option value="B">Philosophy, Psychology, and Religion</option>
                 <option value="C">Auxiliary Sciences of History</option>
                 <option value="D">General and Old World History</option>
                 <option value="E">History of America</option>
@@ -101,24 +102,24 @@ require_once '../includes/config_session.inc.php';
                 <option value="L">Education</option>
                 <option value="M">Music</option>
                 <option value="N">Fine Arts</option>
-                <option value="O">Language and Literature</option>
-                <option value="P">Sciences</option>
-                <option value="Q">Medicine</option>
-                <option value="R">Agriculture</option>
-                <option value="S">Technology</option>
+                <option value="P">Language and Literature</option>
+                <option value="Q">Science</option>
+                <option value="R">Medicine</option>
+                <option value="S">Agriculture</option>
                 <option value="T">Technology</option>
                 <option value="U">Military Science</option>
                 <option value="V">Naval Science</option>
                 <option value="Z">Bibliography, Library, Science, and General Information Resources, Fiction</option>
->
             </select>
         </div>
 
         <!-- Submit button -->
         <button>Upload</button>
         <a href="../admin_book_management.php" class="button"> Go back</a>
+        <?php check_upload_errors()?>
     </form>
-    
+
+
 
 </body>
 

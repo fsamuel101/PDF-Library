@@ -4,11 +4,10 @@
         <div class="admin-title">
 
             <div class="hamburger" onclick="toggleMenu()" id="hamburger">
-                <div onclick="toggleMenu()"></div>
-                <div onclick="toggleMenu()"></div>
-                <div onclick="toggleMenu()"></div>
+                <div id="hamburger1" onclick="toggleMenu(); event.stopPropagation();"></div>
+                <div id="hamburger2" onclick="toggleMenu(); event.stopPropagation();"></div>
+                <div id="hamburger3" onclick="toggleMenu(); event.stopPropagation();"></div>
             </div>
-
             <div class="dropdown-menu" id="dropdownMenu">
                 <form action="includes/logout.inc.php" class="hamb">
                     <button class="hover">Log out</button>

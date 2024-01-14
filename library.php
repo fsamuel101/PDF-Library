@@ -167,6 +167,22 @@ if (!isset($_SESSION['user_id'])) {
         });
     </script>
 
+<script>
+        function toggleMenu() {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            dropdownMenu.classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            var hamburger = document.getElementById("hamburger");
+            if (!event.target.closest('.hamburger') && !event.target.closest('.dropdown-menu')) {
+                var dropdownMenu = document.getElementById("dropdownMenu");
+                dropdownMenu.classList.remove('show');
+            }
+        }
+    </script>
+
     <!-- <form action="includes/logout.inc.php">
         <button>Log out</button>
     </form> -->

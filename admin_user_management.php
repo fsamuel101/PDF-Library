@@ -29,15 +29,15 @@ require_once 'includes/admin_user_management_model.inc.php';
 <header class="green-header">
         <div class="solidgreen1"></div>
 
-        <div class="admin-title">
+        <div class="admin-title" style="cursor: ;">
 
-            <div class="hamburger" onclick="toggleMenu()" id="hamburger">
-                <div onclick="toggleMenu()"></div>
-                <div onclick="toggleMenu()"></div>
-                <div onclick="toggleMenu()"></div>
+            <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="opacity: 0; cursor: none;">
+                <div class="hamburger"  onclick="toggleMenu()"></div>
+                <div class="hamburger"  onclick="toggleMenu()"></div>
+                <div class="hamburger"  onclick="toggleMenu()"></div>
             </div>
 
-            <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-menu" id="dropdownMenu" hidden="hidden">
                 <form action="includes/logout.inc.php" class="hamb">
                     <button class="hover">Log out</button>
                     <a class="hover" href="change_password.php">Change Password</a>
@@ -45,8 +45,8 @@ require_once 'includes/admin_user_management_model.inc.php';
             </div>
 
             <div>
-                <h1><strong>PLSP Library</strong></h1>
-                <p>Admin Interface</p>
+               <h1><strong >User Management</strong></h1>
+                <a href="admin.php"class= "h"> <p>Admin Interface</p></a>
             </div>
 
 
